@@ -1,4 +1,4 @@
-# Smart_DHT_Sensor_Project
+# Smart DHT Sensor Project
 
 This project is a Python-based GUI application built with PyQt5 for monitoring and controlling home environmental data (temperature and humidity) using MQTT communication. 
 It features real-time data visualization, manual control of an A/C unit, and send push notifications. 
