@@ -12,7 +12,8 @@ The GUI consists of four different windows:
 * Real-time dynamic graph of temperature and humidity
 * Alarms screen
 
-![image](https://github.com/user-attachments/assets/8928d08b-bd6d-46e0-ba4f-46928d40e8f2)
+
+![ezgif-82f0eddc75ccb6](https://github.com/user-attachments/assets/31a1e71b-c8d3-4400-9f2a-ff0d543f0a49)
 
 
 The DHT window displays real-time temperature and humidity data from a sensor. When the temperature drops below 18°C, the button turns red, and a request is sent to turn on the air conditioner. Once the air conditioner is on, a 5-second timer is triggered, increasing the room temperature. If humidity exceeds 85%, the humidity button turns red, and a 5-second timer activates to reduce humidity. Additionally, a knob allows you to control the air conditioner's intensity (0-100), sending messages to the hardware through the broker. The relay button controls the air conditioner's use by pausing it. When the relay is engaged, the air conditioner cannot be turned on, even if the temperature drops below 18°C, and the button remains gray.
