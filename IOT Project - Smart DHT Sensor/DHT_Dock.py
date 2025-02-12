@@ -19,7 +19,7 @@ global clientname
 r = random.randrange(1, 100000)
 clientname = "IOT_client-Id-" + str(r)
 DHT_topic = 'pr/home/5976397/sts'
-control_topic = 'pr/home/5976397/control'  # A/C control
+control_topic = 'pr/home/5976397/control'  # A/C relay
 knob_topic = 'pr/home/5976397/knob'  # A/C power
 update_rate = 2000  # Update every two sec
 
@@ -274,12 +274,12 @@ class DHTDock(QDockWidget):
         if state == Qt.Checked:
             self.mc.publish_to("pr/home/5976397/control", "ON")
             print("Relay is ON")
-            self.eHeaterButton.setEnabled(False)  # השבתת כפתור המזגן
+            self.eHeaterButton.setEnabled(False)  
             self.eHeaterButton.setStyleSheet("background-color: gray")
         else:
             self.mc.publish_to("pr/home/5976397/control", "OFF")
             print("Relay is OFF")
-            self.eHeaterButton.setEnabled(True)  # הפעלת כפתור המזגן מחדש
+            self.eHeaterButton.setEnabled(True) 
 
     def turn_on_heater(self):
         if not self.eRelay.isChecked() and not self.heater_active:  # Check that the Relay is not active
